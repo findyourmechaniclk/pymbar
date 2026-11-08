@@ -63,6 +63,7 @@ jobs:
             - conda-forge
         create-args: >-
           python=${{ matrix.python-version }}
+        cache-cache: true
 
     - name: Install package
       run: |
@@ -123,6 +124,7 @@ jobs:
             - conda-forge
         create-args: >-
           python=${{ matrix.python-version }}
+        cache-cache: true
     - name: Install linter and formatter
       run: |
         micromamba install pylint black
